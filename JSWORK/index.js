@@ -1,4 +1,4 @@
-console.log("Hello JS");
+//  console.log("Hello JS");
 // const a=12;
 // if(a>10){
 //     let b=23;
@@ -61,24 +61,24 @@ console.log("Hello JS");
 // const btn=document.getElementById("btn");
 // const disp=document.getElementById("disp");
 // console.dir(disp);
-// function getData(){
-//     console.log("Getdata called");
-//     disp.innerHTML="<h2>hello..</h2>";
-// }
-// btn.addEventListener("click",getData);
+// // function getData(){
+// //     console.log("Getdata called");
+// //     disp.innerHTML="<h2>hello..</h2>";
+// // }
+// // btn.addEventListener("click",getData);
 const promise=new promise((resolve,reject)=>
 {
     let a=12;
     if(a>10)
     {
-        resolved("resolved");
+        resolve({name:"Rahul",branch:"AIMLCSE"});
     }
     else{
-        reject("reject");
+        reject("rejected");
     }
 
 }
 );
 
-promise.then((msg)=>console.log(msg))
-.catch(error=>console.log(error))
+promise.then(msg=>console.log(msg.name))
+.catch(msg=>{console.log(msg)})
